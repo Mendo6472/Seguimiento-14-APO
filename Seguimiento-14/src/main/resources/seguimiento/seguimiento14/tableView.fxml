@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="Root" alignment="CENTER" prefHeight="367.0" prefWidth="1019.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.HelloController">
+    <children>
+        <SplitPane dividerPositions="0.29797979797979796" prefHeight="336.0" prefWidth="640.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <VBox alignment="CENTER" layoutX="-3.0" layoutY="1.0" prefHeight="336.0" prefWidth="219.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Button fx:id="viewExpensesButton" alignment="CENTER" mnemonicParsing="false" onAction="#viewExpenses" text="Ver gastos">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin></Button>
+                                <Button fx:id="viewIncomeButton" mnemonicParsing="false" onAction="#viewIncome" text="Ver ingresos">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin></Button>
+                                <Button fx:id="viewAllRegistersButton" mnemonicParsing="false" onAction="#viewAllRegisters" text="Ver lista combinada">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </VBox.margin></Button>
+                                <Button fx:id="addRegisterButton" mnemonicParsing="false" onAction="#addRegister" text="Agregar gasto/ingreso">
+                                    <opaqueInsets>
+                                        <Insets top="20.0" />
+                                    </opaqueInsets>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                        <Button fx:id="updateBalanceButton" mnemonicParsing="false" onAction="#updateBalance" text="Actualizar balance">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label text="Balance:">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="balanceLabel" text="0" />
+                            </children></VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="334.0" prefWidth="760.0">
+                    <children>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="308.0" prefWidth="689.0">
+                            <columns>
+                                <TableColumn fx:id="dateColumn" prefWidth="222.0" text="Fecha" />
+                        <TableColumn fx:id="amountColumn" prefWidth="147.0" text="Monto" />
+                                <TableColumn fx:id="descriptionColumn" prefWidth="208.0" text="Descripcion" />
+                                <TableColumn fx:id="typeColumn" prefWidth="111.0" text="Tipo" />
+                            </columns>
+                        </TableView>
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</VBox>
